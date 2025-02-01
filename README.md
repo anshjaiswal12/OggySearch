@@ -1,41 +1,121 @@
-I'll help you push your code to GitHub. Here are the steps you need to follow:
+# OggySearch 🔍
 
-1. First, initialize a git repository in your project folder (if not already done):
-```bash
-git init
-```
+A powerful GUI tool for extracting and processing names from web pages, with special optimization for Google Summer of Code (GSoC) pages. OggySearch makes it easy to extract mentor and student names, manage them, and perform batch searches.
 
-2. Add your files to git staging (notice we're not adding .env due to .gitignore):
-```bash
-git add OggySearch.py .gitignore README.md
-```
+![OggySearch Interface](screenshot.png)
 
-3. Create your first commit:
-```bash
-git commit -m "Initial commit: OggySearch application"
-```
+## 🌟 Features
 
-4. Add your GitHub repository as remote:
-```bash
-git remote add origin https://github.com/anshjaiswal12/OggySearch.git
-```
+- **Smart Name Extraction**
+  - Extracts names from any webpage using Gemini AI
+  - Specially optimized for GSoC pages
+  - Supports JavaScript-rendered content
 
-5. Push your code to GitHub:
-```bash
-git push -u origin main
-```
+- **User-Friendly Interface**
+  - Clean and intuitive GUI
+  - Real-time name display
+  - Easy-to-use controls
 
-If you're pushing for the first time, you might need to:
-1. Authenticate with GitHub (you'll be prompted for your credentials)
-2. If you're using main branch (newer repos) instead of master branch, use `main` in the push command as shown above
-3. If you get a rejection due to unrelated histories, you can force the push with:
-```bash
-git push -u origin main --force
-```
+- **Data Management**
+  - Export names to CSV files
+  - Import names from CSV files
+  - Copy names to clipboard
+  - Batch processing support
 
-Important notes:
-1. Make sure your `.gitignore` file is properly set up before pushing
-2. Verify that `.env` file is not being tracked by git (you can check with `git status`)
-3. The `.env` file should not appear in the files being added to git
+- **Search Integration**
+  - Perform batch Google searches
+  - Customizable follow-up queries
+  - Direct browser integration
 
-After pushing, you should see your code appear in your GitHub repository at https://github.com/anshjaiswal12/OggySearch.git
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.x
+- Google Chrome Browser
+- Gemini API key
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/anshjaiswal12/OggySearch.git
+   cd OggySearch
+   ```
+
+2. Install required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Set up your environment:
+   - Create a `.env` file in the project root
+   - Add your Gemini API key:
+     ```
+     GEMINI_API_KEY=your_api_key_here
+     ```
+
+### Usage
+
+1. Launch the application:
+   ```bash
+   python OggySearch.py
+   ```
+
+2. Enter a webpage URL in the input field
+
+3. Click "Extract Names" to process the page
+
+4. Use additional features:
+   - Save extracted names using "Save in CSV"
+   - Copy names using "Copy to Clipboard"
+   - Upload existing CSV files
+   - Perform batch searches with custom queries
+
+## 🛠️ Technical Details
+
+### Key Components
+
+- **Web Scraping**: Selenium WebDriver for JavaScript support
+- **AI Processing**: Google's Gemini AI for name extraction
+- **GUI**: Tkinter for the user interface
+- **Data Handling**: CSV support for import/export
+
+### Dependencies
+
+- requests
+- beautifulsoup4
+- selenium
+- webdriver_manager
+- python-dotenv
+- pyperclip
+
+## 📝 Notes
+
+- Ensure Chrome WebDriver is properly installed
+- Keep your API key secure and never share it
+- For GSoC pages, allow sufficient time for content loading
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+
+1. Fork the repository
+2. Create a new branch
+3. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Google Gemini AI for name extraction capabilities
+- Selenium for web scraping functionality
+- All contributors and users of OggySearch
+
+## 📧 Contact
+
+Ansh Jaiswal - [GitHub](https://github.com/anshjaiswal12)
+
+Project Link: [https://github.com/anshjaiswal12/OggySearch](https://github.com/anshjaiswal12/OggySearch)
