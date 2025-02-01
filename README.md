@@ -1,1 +1,41 @@
-Project Description: OggySearch OggySearch is a Python-based tool designed to simplify and speed up the process of searching for multiple individuals' profiles across the web. Whether you're looking for faculty members from a university, professionals in a specific organization, or contacts from any online directory, OggySearch allows you to efficiently extract, save, and search for their profiles all in one place.  How It Works: Extract Names from a Webpage: Simply paste the URL of a webpage containing names (e.g., a university faculty directory) into the "URL" field. OggySearch will fetch the page, extract all the names listed on it, and display them in a clean, easy-to-read format.  Save and Organize Names: The extracted names can be saved to a text file for future use, allowing you to build and organize a list of people you're interested in.  Search Profiles: Once you've gathered the names, you can input them into the search field, add a specific keyword or organization (e.g., "MIT Physics"), and OggySearch will automatically search Google for relevant profiles. This feature is perfect for finding LinkedIn profiles, academic pages, or any other relevant online information related to the people you need to connect with.  Key Features: Efficient Name Extraction: Quickly extract names from webpages like faculty directories or organization listings without having to manually copy-paste each name. Profile Search Automation: Search for profiles (e.g., LinkedIn, personal websites) by simply entering the person's name and associated keyword (e.g., "MIT Physics LinkedIn"). CSV File Upload: Upload a CSV of names to make the search process even more efficient. Text File Export: Save the extracted names to a text file for further use or to keep a record of your searches. User-Friendly GUI: Built with tkinter, the GUI provides an intuitive, simple interface for a seamless experience. Use Case Example: Imagine you are looking for all the faculty members in the Department of Physics at MIT. You could paste the link to their faculty page (e.g., https://physics.mit.edu/faculty/), and OggySearch will extract the names of all faculty members listed. After saving the list, you can search for their LinkedIn profiles by entering the names and adding the keyword "MIT Physics LinkedIn" in the search field. This makes the process of finding and connecting with professionals faster, more efficient, and less tedious.  Libraries Required: To run this code, the following libraries must be installed:  requests: For making HTTP requests to fetch webpage data and interact with the Gemini API. beautifulsoup4: For parsing HTML content and extracting text from web pages. ast: For safely evaluating and parsing the extracted names from the Gemini API response. tkinter: For creating the graphical user interface (GUI). PIL (Pillow): For working with images (used to handle background images). csv: For reading and parsing CSV files. webbrowser: For opening web pages (used for name searches). Installation: To install the necessary libraries, you can use the following commands:  bash Copy Edit pip install requests beautifulsoup4 pillow For tkinter, it is typically included in Python’s standard library, but if not, you can install it based on your operating system:  Windows: Tkinter is installed by default with Python. Linux: Use the command sudo apt-get install python3-tk to install Tkinter. macOS: Tkinter should be pre-installed with Python.
+I'll help you push your code to GitHub. Here are the steps you need to follow:
+
+1. First, initialize a git repository in your project folder (if not already done):
+```bash
+git init
+```
+
+2. Add your files to git staging (notice we're not adding .env due to .gitignore):
+```bash
+git add OggySearch.py .gitignore README.md
+```
+
+3. Create your first commit:
+```bash
+git commit -m "Initial commit: OggySearch application"
+```
+
+4. Add your GitHub repository as remote:
+```bash
+git remote add origin https://github.com/anshjaiswal12/OggySearch.git
+```
+
+5. Push your code to GitHub:
+```bash
+git push -u origin main
+```
+
+If you're pushing for the first time, you might need to:
+1. Authenticate with GitHub (you'll be prompted for your credentials)
+2. If you're using main branch (newer repos) instead of master branch, use `main` in the push command as shown above
+3. If you get a rejection due to unrelated histories, you can force the push with:
+```bash
+git push -u origin main --force
+```
+
+Important notes:
+1. Make sure your `.gitignore` file is properly set up before pushing
+2. Verify that `.env` file is not being tracked by git (you can check with `git status`)
+3. The `.env` file should not appear in the files being added to git
+
+After pushing, you should see your code appear in your GitHub repository at https://github.com/anshjaiswal12/OggySearch.git
